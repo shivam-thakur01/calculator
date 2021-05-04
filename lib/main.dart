@@ -24,7 +24,7 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( //shiavam,
+    return Scaffold( 
       body: Calculator(),);
   }
 }
