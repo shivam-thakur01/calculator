@@ -16,16 +16,18 @@ String massunittyped = 'kg';
 class _MassConverterState extends State<MassConverter> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    final appbar=AppBar(
         title: Text('Mass Converter'),
-      ),
+      );
+    return Scaffold(
+      appBar: appbar,
       drawer: Drawer(
         child: MyDrawer(),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: MediaQuery.of(context).size.height*0.018,),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Enter mass',contentPadding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
@@ -76,7 +78,7 @@ class _MassConverterState extends State<MassConverter> {
             ),
             //sequence of mass unit [mg,g,kg,t,gr,oz,lb,ton_us,ton_uk,ct]
             Container(
-              height: 503,
+              height: MediaQuery.of(context).size.height*0.7,
               child: SingleChildScrollView(
                 child: Column(children: [
                   Container(  

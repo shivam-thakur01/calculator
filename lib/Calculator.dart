@@ -16,13 +16,14 @@ class _CalculatorState extends State<Calculator> {
 
   @override
   Widget build(BuildContext context) {
+    final appbar = AppBar(
+      title: Text('Calculator'),
+    );
     return Scaffold(
       drawer: Drawer(
         child: MyDrawer(),
       ),
-      appBar: AppBar(
-        title: Text('Calculator'),
-      ),
+      appBar: appbar,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -31,48 +32,50 @@ class _CalculatorState extends State<Calculator> {
               height: 30,
             ),
             Container(
-            alignment: Alignment.topLeft,
-            padding: EdgeInsets.all(10),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    statement,
-                    style: TextStyle(fontSize: 32,),
-                  )
-                ],
+              alignment: Alignment.topLeft,
+              padding: EdgeInsets.all(10),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      statement,
+                      style: TextStyle(
+                        fontSize: 32,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-            // Row(
-              // mainAxisAlignment: MainAxisAlignment.end,
-              // children: [
-                Container(
-                  alignment: Alignment.topRight,
-                  padding: EdgeInsets.all(5),
-                  margin: EdgeInsets.all(5),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Column(
-                      children: [
-                        Text(
-                          resulttoshow,
-                          style: TextStyle(fontSize: 52),
-                        ),
-                      ],
+            Container(
+              alignment: Alignment.topRight,
+              padding: EdgeInsets.all(5),
+              margin: EdgeInsets.all(5),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  children: [
+                    Text(
+                      resulttoshow,
+                      style: TextStyle(fontSize: 52),
                     ),
-                  ),
+                  ],
                 ),
-              // ],
+              ),
+            ),
+            // ],
             // ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 Container(
-                    height: 70,
-                    width: 180,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.1146,
+                    width: MediaQuery.of(context).size.width * 0.5,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -96,8 +99,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 70,
-                    width: 180,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.1146,
+                    width: MediaQuery.of(context).size.width * 0.5,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -123,7 +127,9 @@ class _CalculatorState extends State<Calculator> {
             Row(
               children: [
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -144,7 +150,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -164,7 +172,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -184,7 +194,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -211,7 +223,9 @@ class _CalculatorState extends State<Calculator> {
             Row(
               children: [
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -231,7 +245,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -251,7 +267,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -271,7 +289,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -297,7 +317,9 @@ class _CalculatorState extends State<Calculator> {
             Row(
               children: [
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -317,7 +339,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -337,7 +361,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -357,7 +383,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -383,7 +411,9 @@ class _CalculatorState extends State<Calculator> {
             Row(
               children: [
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -403,7 +433,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -423,7 +455,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),
@@ -445,7 +479,9 @@ class _CalculatorState extends State<Calculator> {
                       },
                     ))),
                 Container(
-                    height: 95,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: (MediaQuery.of(context).size.height-appbar.preferredSize.height-
+                    MediaQuery.of(context).padding.top) * 0.15,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Color.fromRGBO(245, 154, 245, 1), width: 1),

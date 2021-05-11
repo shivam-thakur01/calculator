@@ -14,7 +14,8 @@ class MyDrawer extends StatelessWidget {
           children: [
             Container(child: Column(children: [
               Container(
-                height: 160,width: double.infinity,
+                height: MediaQuery.of(context).size.height*0.3,
+                width: double.infinity,
                 decoration: BoxDecoration(shape: BoxShape.circle,
                 image: DecorationImage(image: AssetImage('assets/images/calculator.png')),
                 ),),
@@ -85,8 +86,7 @@ class MyDrawer extends StatelessWidget {
                       builder: (context) => TempConverter(),
                     ));
               },
-            )
-           
+            ),
           ],
         ),
     );

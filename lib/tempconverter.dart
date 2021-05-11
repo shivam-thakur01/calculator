@@ -27,6 +27,7 @@ class _TempConverterState extends State<TempConverter> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: MediaQuery.of(context).size.height*0.018,),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Enter temp',
@@ -83,7 +84,7 @@ class _TempConverterState extends State<TempConverter> {
             ),
             //sequence [k,C,F,R,Re]
             Container(
-              height: 503,
+              height: MediaQuery.of(context).size.height*0.7,
               child: SingleChildScrollView(
                 child: Column(
                   children: [

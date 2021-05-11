@@ -18,7 +18,8 @@ class _CardWidgetState extends State<CardWidget> {
       child: Row(
         children: [
           Container(
-            width: 200,
+            height: MediaQuery.of(context).size.height*0.05,
+            width: MediaQuery.of(context).size.width*0.55,
             margin: EdgeInsets.all(10),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,

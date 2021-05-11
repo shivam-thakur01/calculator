@@ -19,16 +19,18 @@ String unittyped = 'm';
 class _DistanceConverterState extends State<DistanceConverter> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    final appbar=AppBar(
         title: Text('Length Converter'),
-      ),
+      );
+    return Scaffold(
+      appBar: appbar,
       drawer: Drawer(
         child: MyDrawer(),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: MediaQuery.of(context).size.height*0.018,),
             TextField(
               decoration: InputDecoration(
                 labelText: 'Enter length',contentPadding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
@@ -80,7 +82,7 @@ class _DistanceConverterState extends State<DistanceConverter> {
             //sequence of length unit [mm,cm,dm,m,km,in,ft,yd,mi,nmi]
              
             Container(
-              height: 503,
+              height: MediaQuery.of(context).size.height*0.7,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
